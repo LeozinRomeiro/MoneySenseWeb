@@ -1,11 +1,16 @@
-﻿namespace MoneySense.Models.Income
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace MoneySense.Models.Income
 {
     public class Salary : Quotation
     {
-        public Salary(string title, string description, decimal value, DateTime paymentDate) : base(title, description, value)
+        public Salary(string title, string description, decimal value, int paymentDate) : base(title, description, value)
         {
             PaymentDate = paymentDate;
         }
-        public DateTime PaymentDate { get; set; }
+        [DisplayName("Dia do pagamento")]
+        [Required(ErrorMessage = "A data que sua renda é renovada é obrigatório!")]
+        public int PaymentDate { get; set; }
     }
 }
