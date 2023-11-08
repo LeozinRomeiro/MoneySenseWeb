@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-MoneySenseWeb-5cd3035d-48a5-405a-b8a7-1deaa2937cfa</UserSecretsId>
+    <UserSecretsId>aspnet-MoneySenseWebWeb-5cd3035d-48a5-405a-b8a7-1deaa2937cfa</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

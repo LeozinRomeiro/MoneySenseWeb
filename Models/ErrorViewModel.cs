@@ -1,4 +1,4 @@
-namespace MoneySenseWeb.Models;
+namespace MoneySenseWebWeb.Models;
 
 public class ErrorViewModel
 {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MoneySense.Models
+namespace MoneySenseWeb.Models
 {
     public abstract class Quotation
     {

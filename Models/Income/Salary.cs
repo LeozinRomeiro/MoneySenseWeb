@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MoneySense.Models.Income
+namespace MoneySenseWeb.Models.Income
 {
     public class Salary : Quotation
     {

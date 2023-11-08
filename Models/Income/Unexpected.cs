@@ -1,4 +1,4 @@
-﻿namespace MoneySense.Models.Income
+﻿namespace MoneySenseWeb.Models.Income
 {
     public class Unexpected : Quotation
     {

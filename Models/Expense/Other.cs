@@ -1,6 +1,6 @@
-﻿using MoneySense.Models.Actors;
+﻿using MoneySenseWeb.Models.Actors;
 
-namespace MoneySense.Models.Expense
+namespace MoneySenseWeb.Models.Expense
 {
     public class Other : Quotation
     {

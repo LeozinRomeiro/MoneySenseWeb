@@ -1,4 +1,4 @@
-﻿namespace MoneySense.Models.Actors
+﻿namespace MoneySenseWeb.Models.Actors
 {
     public class User : Actor
     {

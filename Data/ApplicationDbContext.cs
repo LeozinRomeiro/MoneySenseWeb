@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MoneySense.Models.Income;
-using MoneySense.Models.Expense;
+using MoneySenseWeb.Models.Income;
+using MoneySenseWeb.Models.Expense;
 
-namespace MoneySenseWeb.Data;
+namespace MoneySenseWebWeb.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {
 	public DbSet<Salary> Salaries { get; set; }
 	public DbSet<Other> Others { get; set; }
-	public DbSet<MoneySense.Models.Income.Unexpected> IncomeUnexpecteds { get; set; }
-    public DbSet<MoneySense.Models.Expense.Unexpected> ExpenseUnexpecteds { get; set; }
+	public DbSet<MoneySenseWeb.Models.Income.Unexpected> IncomeUnexpecteds { get; set; }
+    public DbSet<MoneySenseWeb.Models.Expense.Unexpected> ExpenseUnexpecteds { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{

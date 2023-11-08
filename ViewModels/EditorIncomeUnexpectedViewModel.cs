@@ -1,4 +1,4 @@
-﻿namespace MoneySense.ViewModels
+﻿namespace MoneySenseWebWeb.ViewModels
 {
     public class EditorIncomeUnexpectedViewModel
     {
