@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "MoneySenseWebWeb": {
+    "MoneySenseWeb": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

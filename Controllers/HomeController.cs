@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using MoneySenseWebWeb.Models;
+using MoneySenseWeb.Models;
 
-namespace MoneySenseWebWeb.Controllers;
+namespace MoneySenseWeb.Controllers;
 
 public class HomeController : Controller
 {

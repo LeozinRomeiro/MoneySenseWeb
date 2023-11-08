@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MoneySenseWeb.Models.Income;
 using MoneySenseWeb.Models.Expense;
 
-namespace MoneySenseWebWeb.Data;
+namespace MoneySenseWeb.Data;
 
 public class ApplicationDbContext : IdentityDbContext
 {

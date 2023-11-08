@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace MoneySenseWebWeb.Data.Migrations
+namespace MoneySenseWeb.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {
