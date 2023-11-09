@@ -2,12 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using MoneySenseWeb.Models.Income;
 using MoneySenseWeb.Models.Expense;
+using MoneySenseWeb.Data.Mappings;
 
 namespace MoneySenseWeb.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class ApplicationDbContext : DbContext
 {
-	public DbSet<Salary> Salaries { get; set; }
+    public DbSet<Salary> Salaries { get; set; }
 	public DbSet<Other> Others { get; set; }
 	public DbSet<MoneySenseWeb.Models.Income.Unexpected> IncomeUnexpecteds { get; set; }
     public DbSet<MoneySenseWeb.Models.Expense.Unexpected> ExpenseUnexpecteds { get; set; }
@@ -18,10 +19,11 @@ public class ApplicationDbContext : IdentityDbContext
 		//optionsBuilder.LogTo(Console.WriteLine);
 	}
 
-    //protected override void OnModelCreating(ModelBuilder modelBuilder)
-    //{
-    //    //modelBuilder.ApplyConfiguration(new PriceMap());
-    //    //modelBuilder.ApplyConfiguration(new FillingStationMap());
-    //    //modelBuilder.ApplyConfiguration(new FuelMap());
-    //}
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfiguration(new SalaryMap());
+        modelBuilder.ApplyConfiguration(new OtherMap());
+        modelBuilder.ApplyConfiguration(new IncomeUnexpectedMap());
+        modelBuilder.ApplyConfiguration(new ExpenseUnexpectedMap());
+    }
 }

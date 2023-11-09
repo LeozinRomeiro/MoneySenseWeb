@@ -4,11 +4,11 @@ namespace MoneySenseWeb.Models.Expense
 {
     public class Other : Quotation
     {
-        public Other(string title, string description, decimal value, int user) : base(title, description, value)
+        public Other(string title, string description, decimal value, int userId) : base(title, description, value)
         {
-            UserConsumer = user;
+            UserId = userId;
         }
-        //public Actor UserConsumer { get; set; }
-        public int UserConsumer { get; set; }
+        public Actor User { get; set; }
+        public int UserId { get; set; }
     }
 }
