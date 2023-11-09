@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace MoneySenseWeb.Models.ActorsContext
 {
-    public class UserLogin : IdentityUserLogin<string>
+    public class UserLogin : IdentityUser
     {
-        public override string UserId { get => base.UserId; set => base.UserId = value; }
+        public override string Id { get => base.Id; set => base.Id = value; }
     }
 }

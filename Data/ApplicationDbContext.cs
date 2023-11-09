@@ -5,10 +5,11 @@ using MoneySenseWeb.Models.Expense;
 using MoneySenseWeb.Data.Mappings;
 using MoneySenseWeb.Models.Actors;
 using Microsoft.AspNetCore.Identity;
+using MoneySenseWeb.Models.ActorsContext;
 
 namespace MoneySenseWeb.Data;
 
-public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+public class ApplicationDbContext : IdentityDbContext<UserLogin>
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
@@ -30,5 +31,6 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
         modelBuilder.ApplyConfiguration(new OtherMap());
         modelBuilder.ApplyConfiguration(new IncomeUnexpectedMap());
         modelBuilder.ApplyConfiguration(new ExpenseUnexpectedMap());
+        modelBuilder.ApplyConfiguration(new UserLoginMap());
     }
 }
