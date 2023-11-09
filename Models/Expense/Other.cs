@@ -1,4 +1,4 @@
-﻿using MoneySenseWeb.Models.Actors;
+﻿using MoneySenseWeb.Models.ActorsContext;
 
 namespace MoneySenseWeb.Models.Expense
 {
