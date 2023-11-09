@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace MoneySenseWeb.Models.Actors
+namespace MoneySenseWeb.Models.ActorsContext
 {
     public class User : Actor
     {
