@@ -1,4 +1,6 @@
-﻿namespace MoneySenseWeb.Models.Actors
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace MoneySenseWeb.Models.Actors
 {
     public class User : Actor
     {
