@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using MoneySenseWeb.Models.Income;
 using MoneySenseWeb.Models.Expense;
 using MoneySenseWeb.Data.Mappings;
+using MoneySenseWeb.Models.Actors;
 
 namespace MoneySenseWeb.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public DbSet<Salary> Salaries { get; set; }
 	public DbSet<Other> Others { get; set; }
