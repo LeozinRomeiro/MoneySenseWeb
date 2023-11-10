@@ -4,7 +4,7 @@ namespace MoneySenseWeb.Models.Expense
 {
     public class Other : Quotation
     {
-        public Other(string title, string description, decimal value, int userId) : base(title, description, value)
+        public Other(string title, string description, decimal value, string userName, int userId) : base(title, description, value, userName)
         {
             UserId = userId;
         }

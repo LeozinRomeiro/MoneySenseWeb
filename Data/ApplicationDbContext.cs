@@ -20,8 +20,8 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Models.Expense.Unexpected> ExpenseUnexpecteds { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 	{
-		//optionsBuilder.UseSqlServer("Server=localhost,1433;Database=Data;User ID=sa;Password=Leoadmin32@#$;Trusted_Connection=False;TrustServerCertificate=True;");
-		optionsBuilder.UseSqlServer("Server=LEONARDOR-PC\\SQLEXPRESS;Database=DataHomologacao;User Id=leo_sa;Password=leosa32!;Trusted_Connection=False; TrustServerCertificate=True;");
+		optionsBuilder.UseSqlServer("Server=localhost,1433;Database=Data;User ID=sa;Password=Leoadmin32@#$;Trusted_Connection=False;TrustServerCertificate=True;");
+		//optionsBuilder.UseSqlServer("Server=LEONARDOR-PC\\SQLEXPRESS;Database=DataHomologacao;User Id=leo_sa;Password=leosa32!;Trusted_Connection=False; TrustServerCertificate=True;");
 		//optionsBuilder.LogTo(Console.WriteLine);
 	}
 

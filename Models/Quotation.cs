@@ -5,11 +5,12 @@ namespace MoneySenseWeb.Models
 {
     public abstract class Quotation
     {
-        public Quotation(string title, string description, decimal value)
+        public Quotation(string title, string description, decimal value, string userName)
         {
             Title = title;
             Description = description;
             Value = value;
+            UserName = userName;
         }
 
         public int Id { get; set; }
@@ -25,5 +26,7 @@ namespace MoneySenseWeb.Models
         public DateTime CreateAt { get; set; } = DateTime.Now;
         [DisplayName("Atualizado em")]
         public DateTime UpdateAt { get; set; } = DateTime.Now;
+        [DisplayName("Usuário criador")]
+        public string UserName { get; set; }
     }
 }
