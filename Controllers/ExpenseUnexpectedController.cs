@@ -60,6 +60,8 @@ namespace MoneySenseWeb.Controllers
         {
             if (ModelState.IsValid)
             {
+                unexpected.UserName = User.Identity.Name;
+
                 _context.Add(unexpected);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
