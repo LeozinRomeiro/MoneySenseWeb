@@ -10,26 +10,31 @@ namespace MoneySenseWeb.Data.Mappings
 		{
 			builder.ToTable("Category");
 			
-			builder.HasKey(x => x.Id);
+			builder.HasKey(x => x.CategoryId);
 			
-			builder.Property(x=>x.Id)
+			builder.Property(x=>x.CategoryId)
 				.ValueGeneratedOnAdd()
 				.UseIdentityColumn();
 
 			builder.Property(x => x.Title)
 				.IsRequired()
 				.HasColumnName("Title")
-				.HasColumnType("NVARCAHR");
+				.HasColumnType("NVARCHAR(50)");
 
-			builder.Property(x => x.Icon)
+			builder.Property(x => x.Description)
+                .IsRequired()
+                .HasColumnName("Description")
+                .HasColumnType("NVARCHAR(100)");
+
+            builder.Property(x => x.Icon)
 				.IsRequired()
 				.HasColumnName("Icon")
-				.HasColumnType("NVARCAHR");
+				.HasColumnType("NVARCHAR(5)");
 
 			builder.Property(x => x.Type)
 				.IsRequired()
 				.HasColumnName("Type")
-				.HasColumnType("NVARCAHR");
+				.HasColumnType("NVARCHAR(10)");
 		}
 	}
 }
