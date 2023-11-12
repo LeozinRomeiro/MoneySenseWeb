@@ -35,6 +35,8 @@ namespace MoneySenseWeb.Data.Mappings
 				.IsRequired()
 				.HasColumnName("Type")
 				.HasColumnType("NVARCHAR(10)");
-		}
+
+            builder.Ignore(x => x.TitleWithIcon);
+        }
 	}
 }
