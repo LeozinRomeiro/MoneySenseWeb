@@ -19,9 +19,10 @@ html {
 }
 
 body {
-/*  margin-bottom: 60px;
-  background-color: #12161d;
-  color:black;*/
+    margin-bottom: 60px;
+    background-color: navajowhite;
+    color: #fff;
+    overflow: hidden;
 }
 
 .e-bigger {

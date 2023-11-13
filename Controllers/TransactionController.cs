@@ -46,7 +46,7 @@ namespace MoneySenseWeb.Controllers
             return View(transaction);
         }
 
-        // GET: Transaction/Create
+        // GET: Transaction/Editor
         public async Task<IActionResult> Editor(int id = 0)
         {
             if (_context.Transactions == null)
@@ -55,7 +55,7 @@ namespace MoneySenseWeb.Controllers
             }
             if (id == 0)
             {
-                ViewData["CategoryId"] = new SelectList(_context.Categorys, "CategoryId", "Description");
+                PopulateCategorys();
                 return View(new Transaction());
             }
             else
@@ -165,6 +165,15 @@ namespace MoneySenseWeb.Controllers
         private bool TransactionExists(int id)
         {
           return (_context.Transactions?.Any(e => e.TransactionId == id)).GetValueOrDefault();
+        }
+
+        [NonAction]
+        public void PopulateCategorys()
+        {
+            var CategoryCollection = _context.Categorys.ToList();
+            Category DefaultCategory = new Category() { CategoryId = 0, Title = "Escolha uma Categoria" };
+            CategoryCollection.Insert(0, DefaultCategory);
+            ViewBag.Categorys = CategoryCollection;
         }
     }
 }

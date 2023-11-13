@@ -14,10 +14,6 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         
     }
-    public DbSet<Salary> Salaries { get; set; }
-	public DbSet<Other> Others { get; set; }
-	public DbSet<Models.Income.Unexpected> IncomeUnexpecteds { get; set; }
-    public DbSet<Models.Expense.Unexpected> ExpenseUnexpecteds { get; set; }
     public DbSet<Category> Categorys { get; set; }
     public DbSet<Transaction> Transactions { get; set; }
 
@@ -26,10 +22,6 @@ public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.ApplyConfiguration(new SalaryMap());
-        modelBuilder.ApplyConfiguration(new OtherMap());
-        modelBuilder.ApplyConfiguration(new IncomeUnexpectedMap());
-        modelBuilder.ApplyConfiguration(new ExpenseUnexpectedMap());
         modelBuilder.ApplyConfiguration(new TransactionMap());
         modelBuilder.ApplyConfiguration(new CategoryMap());
     }
