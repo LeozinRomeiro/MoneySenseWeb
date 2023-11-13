@@ -65,22 +65,40 @@ namespace MoneySenseWeb.Controllers
                 {
                     return NotFound();
                 }
-                ViewData["CategoryId"] = new SelectList(_context.Categorys, "CategoryId", "Description", transaction.CategoryId);
+                PopulateCategorys();
                 return View(transaction);
             }
 
         }
-        // POST: Transaction/Editor
+        // POST: Transaction/Editor/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editor([Bind("TransactionId,CategoryId,Amount,Description,Date")] Transaction transaction)
         {
+
             if (ModelState.IsValid)
             {
-                await _context.AddAsync(transaction);
+                if (transaction.TransactionId==0)
+                    _context.Add(transaction);
+                else
+                    _context.Update(transaction);
                 await _context.SaveChangesAsync();
+                try
+                {
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!TransactionExists(transaction.TransactionId))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
                 return RedirectToAction(nameof(Index));
             }
             PopulateCategorys();
