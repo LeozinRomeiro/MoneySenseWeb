@@ -70,20 +70,20 @@ namespace MoneySenseWeb.Controllers
             }
 
         }
-        // POST: Transaction/Create
+        // POST: Transaction/Editor
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TransactionId,CategoryId,Amount,Description,Date,CreateDate")] Transaction transaction)
+        public async Task<IActionResult> Editor([Bind("TransactionId,CategoryId,Amount,Description,Date")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(transaction);
+                await _context.AddAsync(transaction);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categorys, "CategoryId", "Description", transaction.CategoryId);
+            PopulateCategorys();
             return View(transaction);
         }
 

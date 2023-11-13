@@ -9,7 +9,7 @@ namespace MoneySenseWeb.Models
         public int CategoryId { get; set; }
         [DisplayName("Categoria")]
         [Required(ErrorMessage = "Campo obrigatório, por favor aponte a categoria")]
-        public Category Category { get; set; }
+        public Category? Category { get; set; }
         public int Amount { get; set; }
         [DisplayName("Descrição")]
         public string? Description { get; set; }

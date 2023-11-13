@@ -84,7 +84,6 @@ namespace MoneySenseWeb.Controllers
                         await _context.AddAsync(category);
                     else
                         _context.Update(category);
-                    _context.Update(category);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
