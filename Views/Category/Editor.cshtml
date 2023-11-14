@@ -20,15 +20,13 @@
                 </div>
                 <div class="mb-3">
                     <ejs-textbox id="Title" placeholder="Titulo" ejs-for="@Model.Title" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <span asp-validation-for="Title" class="text-danger fs-6"> </span>
                 </div>
                 <div class="mb-3">
                     <ejs-textbox id="Description" placeholder="Descrição" ejs-for="@Model.Description" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <div class="mb-3">
                     <ejs-textbox id="Icon" placeholder="Icone" ejs-for="@Model.Icon" floatLabelType="Always"></ejs-textbox>
-                    <span asp-validation-for="Icon" class="text-danger"></span>
                 </div>
                 <ejs-button id="submit" type="submit" content="Salvar" cssClass="e-success"></ejs-button>
             </form>

@@ -12,20 +12,20 @@
                 <input type="hidden" name="TransactionId" value="@Model.TransactionId" />
                 <div class="mb-3">
                     <ejs-datepicker id="Date" ejs-for="Date" placeholder="Data" floatLabelType="Always" format="dd-MM-yy"></ejs-datepicker>
-                    <span asp-validation-for="Date" class="text-danger"></span>
+                    <span asp-validation-for="Date" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
                     <ejs-dropdownlist id="ddlCategory" ejs-for="CategoryId" dataSource="@ViewBag.Categorys" placeholder="Categoria"
                     floatLabelType="Always" allowFiltering="true" ignoreAccent="true" filterType="Contains" popupHeight="220px">
                     <e-dropdownlist-fields value="CategoryId" text="TitleWithIcon"></e-dropdownlist-fields></ejs-dropdownlist>
+                    <span asp-validation-for="CategoryId" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
                     <ejs-numerictextbox id="Amount" ejs-for="Amount" floatLabelType="Always" placeholder="Quantidade" min=0 format="c0"></ejs-numerictextbox>
-                    <span asp-validation-for="Amount" class="text-danger"></span>
+                    <span asp-validation-for="Amount" class="text-danger fs-6"></span>
                 </div>
                 <div class="mb-3">
                     <ejs-textbox id="Description" placeholder="Descrição" ejs-for="Description" floatLabelType="Always" multiline="true"></ejs-textbox>
-                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <ejs-button id="submit" type="submit" content="Salvar" cssClass="e-success"></ejs-button>
             </form>

@@ -7,10 +7,11 @@ namespace MoneySenseWeb.Models
     public class Transaction
     {
         public int TransactionId { get; set; }
-        public int CategoryId { get; set; }
         [DisplayName("Categoria")]
         [Required(ErrorMessage = "Campo obrigatório, por favor aponte a categoria")]
+        public int CategoryId { get; set; }
         public Category? Category { get; set; }
+        [Range(1, int.MaxValue, ErrorMessage = "O valor valor precisa ser maior que zero")]
         public double Amount { get; set; }
         [DisplayName("Descrição")]
         public string? Description { get; set; }

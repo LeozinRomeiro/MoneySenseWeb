@@ -31,7 +31,7 @@ namespace MoneySenseWeb.Data.Mappings
                 .HasColumnType("NVARCHAR(100)");
 
             builder.Property(x => x.CreateDate)
-                .ValueGeneratedOnAdd();
+                .ValueGeneratedOnAddOrUpdate();
         }
     }
 }

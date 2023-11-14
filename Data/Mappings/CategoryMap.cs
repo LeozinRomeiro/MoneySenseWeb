@@ -22,7 +22,6 @@ namespace MoneySenseWeb.Data.Mappings
 				.HasColumnType("NVARCHAR(50)");
 
 			builder.Property(x => x.Description)
-                .IsRequired()
                 .HasColumnName("Description")
                 .HasColumnType("NVARCHAR(100)");
 

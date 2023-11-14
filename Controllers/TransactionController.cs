@@ -80,6 +80,7 @@ namespace MoneySenseWeb.Controllers
 
             if (ModelState.IsValid)
             {
+
                 if (transaction.TransactionId==0)
                     _context.Add(transaction);
                 else
