@@ -14,7 +14,7 @@ namespace MoneySenseWeb.Models
         {
             get
             {
-                return this.Icon + " " + this.Title;
+                return Icon + " " + Title;
             }
         }
 
