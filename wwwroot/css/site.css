@@ -41,6 +41,19 @@ body {
     color: inherit !important;
 }
 
+/*Logo*/
+.logo-wrapper {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-logo {
+    padding: 10px 10px;
+}
+
+
 
 /*Button*/
 .btn:focus, .btn:active {
@@ -182,6 +195,51 @@ body {
     .widget.chart {
         padding: 5px;
     }
+
+/*Menu*/
+#menu {
+    width: 100% !important;
+    background-color: inherit;
+    overflow: hidden;
+}
+
+    #menu .e-menu-item:not(.e-separator) {
+        height: 50px;
+        border-radius: 4px;
+    }
+
+    #menu .e-menu-item {
+        box-sizing: border-box;
+    }
+
+        #menu .e-menu-item a {
+            width: 100%;
+            color: rgb(171, 163, 152);
+            font-weight: 300;
+            padding: 7px 5px;
+            box-sizing: border-box;
+        }
+
+    #menu .e-anchor-wrap {
+        display: inline-block;
+    }
+
+    #menu .e-menu-item .e-anchor-wrap span.e-menu-icon {
+        color: rgb(171, 163, 152);
+    }
+
+    #menu .e-menu-item.e-separator {
+        border: none;
+        margin: 5px 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        color: #65da41;
+    }
+
+        #menu .e-menu-item.e-separator:not(:first-child) {
+            margin-top: 35px;
+        }
 
 /*SideBar*/
 #sidebar {
